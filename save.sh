@@ -6,6 +6,7 @@ set -e
 INDEX_FILE="index"
 SAVE_DIR="save"
 DATE=$(date +"%Y-%m-%d_%H:%M:%S  %z") 
+GIT_KEY="$HOME/.ssh/git"
 
 # clear current save dir
 rm -rf $SAVE_DIR
@@ -24,6 +25,10 @@ find "$(pwd)/save" -type d -name ".git" -exec rm -rf {} +
 
 # show changes
 git diff
+
+# initiate ssh agent
+eval $(ssh-agent -s)
+ssh-add $GIT_KEY
 
 # save to repo
 git add .
