@@ -19,6 +19,9 @@ for dest in $(cat $INDEX_FILE); do
   fi
 done
 
+# remove submodules by force
+find "$(pwd)/save" -type d -name ".git" -exec rm -rf {} +
+
 # show changes
 git diff
 
