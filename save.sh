@@ -33,4 +33,4 @@ ssh-add $GIT_KEY
 # save to repo
 git add .
 git commit -m "Backup on $DATE"
-git push origin main
+git push
