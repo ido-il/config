@@ -1,4 +1,4 @@
-feh --bg-scale $HOME/background.jpg
+$HOME/.fehbg
 picom &
 
 exec i3
