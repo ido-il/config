@@ -6,9 +6,9 @@ return {
     ts_update()
 
     require('nvim-treesitter.configs').setup({
-      highlight = {
-        enable = true,
-      },
+      -- highlight = {
+      --   enable = true,
+      -- },
 
       ensure_installed = {
         "json",
