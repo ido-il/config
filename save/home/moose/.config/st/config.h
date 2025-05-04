@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "BigBlueTermPlus Nerd Font Mono:size=8";
+static char *font = "BigBlueTermPlus Nerd Font Mono:size=10";
 static int borderpx = 2;
 
 /*
