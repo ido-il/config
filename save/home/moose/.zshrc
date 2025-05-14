@@ -5,7 +5,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 alias nv="nvim"
 
-ZSH_THEME="afowler"
+ZSH_THEME="nicoulaj"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
