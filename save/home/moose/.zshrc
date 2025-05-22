@@ -4,6 +4,7 @@ export EDITOR="nvim"
 export XDG_CONFIG_HOME="$HOME/.config"
 
 alias nv="nvim"
+alias gs="git status"
 
 ZSH_THEME="nicoulaj"
 plugins=(git)
