@@ -10,15 +10,18 @@ return {
 		},
 
 		config = function()
+			local cmp = require('cmp')
+			local luasnip = require('luasnip')
+
+			-- TODO: find more snippers :P
 			-- load snippets
 			require("luasnip.loaders.from_vscode").lazy_load()
 
 			-- configure cmp
-			local cmp = require('cmp')
 			cmp.setup({
 				snippet = {
 					expand = function(args)
-						require('luasnip').lsp_expand(args.body)
+						luasnip.lsp_expand(args.body)
 					end,
 				},
 
@@ -28,18 +31,18 @@ return {
 				},
 
 				mapping = cmp.mapping.preset.insert({
-					['<C-b>'] = cmp.mapping.scroll_docs(-4),
-					['<C-f>'] = cmp.mapping.scroll_docs(4),
 					['<C-j>'] = cmp.mapping.select_next_item(),
 					['<C-k>'] = cmp.mapping.select_prev_item(),
-					['<C-Space>'] = cmp.mapping.complete(),
+					['<C-b>'] = cmp.mapping.scroll_docs(-4),
+					['<C-f>'] = cmp.mapping.scroll_docs(4),
 					['<C-e>'] = cmp.mapping.abort(),
 					['<CR>'] = cmp.mapping.confirm({ select = true }),
 				}),
 
 				sources = cmp.config.sources({
-					{ name = 'buffer' },
 					{ name = 'nvim_lsp' },
+					{ name = 'buffer' },
+				}, {
 					{ name = 'luasnip' },
 				})
 			})
@@ -47,16 +50,9 @@ return {
 			cmp.setup.filetype('gitcommit', {
 				sources = cmp.config.sources({
 					{ name = 'git' },
+				}, {
 					{ name = 'buffer' },
 				})
-			})
-
-			-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
-			cmp.setup.cmdline({ '/', '?' }, {
-				mapping = cmp.mapping.preset.cmdline(),
-				sources = {
-					{ name = 'buffer' }
-				}
 			})
 		end
 	},
@@ -64,17 +60,30 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 
 		dependencies = {
+			"hrsh7th/cmp-nvim-lsp",
 			"mason-org/mason.nvim",
 			"neovim/nvim-lspconfig",
 		},
 
 		config = function()
-			require("mason").setup({
+			local mason = require("mason")
+			local lspconfig = require("lspconfig")
+			local mason_lspconfig = require("mason-lspconfig")
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+			mason.setup({
 				-- mason config here
 			})
 
-			local mason_lspconfig = require("mason-lspconfig")
 			mason_lspconfig.setup({
+				handlers = {
+					function(server_name)
+						lspconfig[server_name].setup {
+							capabilities = capabilities
+						}
+					end
+				},
+
 				ensure_installed = {
 					-- TODO: check names for LSPs of:
 					-- * python
@@ -82,6 +91,8 @@ return {
 					-- * bash
 					-- * c/cpp
 				},
+
+				automatic_enable = true
 			})
 		end
 	}
