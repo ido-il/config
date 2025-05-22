@@ -1,4 +1,5 @@
 /home/moose/.config/nvim
+!/home/moose/.config/nvim/lazy-lock.json
 /home/moose/.config/dunst
 /home/moose/.config/sxhkd
 /home/moose/.config/scripts
@@ -12,4 +13,3 @@
 /home/moose/background.jpg
 /home/moose/.fehbg
 /home/moose/.xinitrc
-
