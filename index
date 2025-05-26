@@ -1,18 +1,29 @@
-/home/moose/.config/nvim
-!/home/moose/.config/nvim/lazy-lock.json
-/home/moose/.config/dunst
-/home/moose/.config/sxhkd
-/home/moose/.config/scripts
-/home/moose/.config/i3/config
-/home/moose/.config/picom
+# system
+/etc/pacman.conf
+
+# shell
 /home/moose/.config/st
 !/home/moose/.config/st/st
-/home/moose/.config/qutebrowser
 /home/moose/.zshrc
 /home/moose/.zprofile
 /home/moose/.tmux.conf
-/home/moose/.tmux
+
+# editor
+/home/moose/.config/nvim
+!/home/moose/.config/nvim/lazy-lock.json
+
+# display
+/home/moose/.xinitrc
+/home/moose/.config/i3/config
+/home/moose/.config/picom
 /home/moose/background.jpg
 /home/moose/.fehbg
-/home/moose/.xinitrc
-/etc/pacman.conf
+
+# browser
+/home/moose/.config/qutebrowser
+
+
+# other
+/home/moose/.config/dunst
+/home/moose/.config/sxhkd
+/home/moose/.config/scripts
