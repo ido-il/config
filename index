@@ -23,8 +23,6 @@
 /home/moose/.config/qutebrowser
 !/home/moose/.config/qutebrowser/autoconfig.yml
 
-
-
 # other
 /home/moose/.config/dunst
 /home/moose/.config/sxhkd
