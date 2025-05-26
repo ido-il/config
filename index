@@ -21,6 +21,8 @@
 
 # browser
 /home/moose/.config/qutebrowser
+!/home/moose/.config/qutebrowser/autoconfig.yml
+
 
 
 # other
