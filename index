@@ -6,6 +6,8 @@
 /home/moose/.config/i3/config
 /home/moose/.config/picom
 /home/moose/.config/st
+!/home/moose/.config/st/st
+/home/moose/.config/qutebrowser
 /home/moose/.zshrc
 /home/moose/.zprofile
 /home/moose/.tmux.conf
@@ -13,3 +15,4 @@
 /home/moose/background.jpg
 /home/moose/.fehbg
 /home/moose/.xinitrc
+/etc/pacman.conf
