@@ -1,0 +1,2 @@
+source /home/moose/.local/scripts/init.sh
+exec i3
