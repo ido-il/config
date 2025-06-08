@@ -1,5 +1,6 @@
 # system
 /etc/pacman.conf
+/etc/lemurs
 
 # shell
 /home/moose/.config/st
@@ -23,7 +24,10 @@
 /home/moose/.config/qutebrowser
 !/home/moose/.config/qutebrowser/autoconfig.yml
 
+# remove sensitive data
+!/home/moose/.cache
+
 # other
 /home/moose/.config/dunst
 /home/moose/.config/sxhkd
-/home/moose/.config/scripts
+/home/moose/.local/scripts
