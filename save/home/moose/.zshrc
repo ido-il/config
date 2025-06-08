@@ -1,3 +1,4 @@
+
 alias nv="nvim"
 alias gs="git status"
 

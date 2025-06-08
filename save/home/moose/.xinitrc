@@ -1,5 +1,2 @@
-$HOME/.fehbg
-dunst &
-picom &
-
+$SCRIPT_HOME/init.sh
 exec i3

@@ -11,3 +11,5 @@ export TERM="st"
 export TERMINAL="st"
 
 export CARGO_HOME="$HOME/.local/cargo"
+
+[[ -z $TMUX ]] && startx
