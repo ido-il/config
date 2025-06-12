@@ -20,8 +20,9 @@ c.downloads.location.directory = '~/Downloads'
 # Privacy & Security
 c.content.headers.accept_language = "en-US,en;q=0.9"
 c.content.headers.user_agent = (
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:115.0) "
-    "Gecko/20100101 Firefox/115.0"
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+    "AppleWebKit/537.36 (KHTML, like Gecko)"
+    "Chrome/137.0.0.0 Safari/537.36"
 )
 
 # do_not_track break youtube
@@ -33,7 +34,7 @@ c.content.desktop_capture = False
 c.content.notifications.enabled = False
 c.content.media.audio_capture = False
 c.content.media.video_capture = False
-c.content.canvas_reading = False
+c.content.canvas_reading = False  # <-- breaks iframes
 c.content.webgl = False
 c.content.pdfjs = True
 c.content.cookies.accept = 'no-3rdparty'
