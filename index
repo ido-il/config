@@ -23,6 +23,7 @@
 /home/moose/.config/qutebrowser
 !/home/moose/.config/qutebrowser/autoconfig.yml
 !/home/moose/.config/qutebrowser/bookmarks
+!/home/moose/.config/qutebrowser/qsettings
 
 # remove sensitive data
 !/home/moose/.cache
