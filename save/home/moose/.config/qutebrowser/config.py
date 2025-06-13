@@ -26,7 +26,7 @@ c.content.headers.user_agent = (
 )
 
 # do_not_track break youtube
-# c.content.headers.do_not_track = True
+c.content.headers.do_not_track = True
 
 c.content.autoplay = False
 c.content.geolocation = False
@@ -34,7 +34,7 @@ c.content.desktop_capture = False
 c.content.notifications.enabled = False
 c.content.media.audio_capture = False
 c.content.media.video_capture = False
-c.content.canvas_reading = False  # <-- breaks iframes
+c.content.canvas_reading = True  # <-- breaks iframes if False
 c.content.webgl = False
 c.content.pdfjs = True
 c.content.cookies.accept = 'no-3rdparty'
