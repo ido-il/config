@@ -15,12 +15,12 @@ timestamp(){ date +"%Y-%m-%d_%H-%M-%S"; }
 MODE=${1:-help}
 
 case "$MODE" in
-  select|1)
+  select)
     maim -s | $CLIP || die maim
     notify-send -u low "📸 area screenshot"
     ;;
 
-  freeze|0)
+  freeze)
     need feh
     mkdir -p "$SAVE_DIR"
     FILE="$SAVE_DIR/$(timestamp).png"
@@ -35,7 +35,7 @@ case "$MODE" in
     notify-send -u low "❄️ frozen screenshot saved"
     ;;
 
-  edit|e)
+  edit)
     mkdir -p "$SAVE_DIR"
     FILE="$SAVE_DIR/$(timestamp).png"
     maim -s "$FILE" || die maim
