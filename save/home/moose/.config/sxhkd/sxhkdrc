@@ -14,3 +14,14 @@ super + Return
 super + {s, shift + s, alt + s}
   $SCRIPT_HOME/screenshot.sh {select, freeze, edit}
 
+# browser
+super + b
+  $BROWSER
+
+# volume control
+# figure out wireplumber id detection. for now, 43
+{XF86AudioRaiseVolume,XF86AudioLowerVolume}
+  $SCRIPT_HOME/volume.sh {up,down} 43
+
+XF86AudioMute
+  $SCRIPT_HOME/volume.sh toggle 43
