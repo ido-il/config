@@ -22,6 +22,7 @@ err() { echo "Error: $1" && exit 1 }
 #==============================
 DISK=""
 TIMEZONE=""
+HOSTNAME=""
 
 ENCRYPT=false
 PASSPHRASE=""
@@ -38,11 +39,20 @@ LVM_HOME_SIZE=""
 BINARIES=`cat <<EOF
 wipefs
 sgdisk
-udevadm
+partprobe
 mkfs.fat
 mkfs.ext4
+mkswap
+swapon
 mount
 umount
+pacstrap
+genfstab
+mkdir
+tee
+blkid
+ln
+sed
 arch-chroot
 cp
 EOF`
@@ -192,7 +202,6 @@ pass
 # boot
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
-
 EOF
 
 echo "finished initial setup! rebooting"
