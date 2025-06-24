@@ -14,3 +14,8 @@ super + Return
 super + {s, shift + s, alt + s}
   $SCRIPT_HOME/screenshot.sh {select, freeze, edit}
 
+# browser
+super + b
+  $BROWSER
+
+# volume control

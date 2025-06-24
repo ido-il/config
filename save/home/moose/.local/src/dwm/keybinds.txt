@@ -1,0 +1,27 @@
+MOD+d            - dmenu run
+MOD+SHIFT+Return - new terminal
+MOD+b			 - toggle status bar
+MOD+j			 - next window in tab
+MOD+k			 - prev window in tab
+MOD+i			 - incmaster +1
+MOD+p			 - incmaster -1
+MOD+h			 - move main window border left
+MOD+l			 - move main window border right
+MOD+Return		 - zoom
+MOD+Tab 		 - toggle view
+MOD+q			 - close tagged window
+MOD+t			 - set layout tiled
+MOD+m			 - set layout stacked
+MOD+f			 - set layout float
+MOD+Space	     - set layout default
+MOD+SHIFT+Space  - toggle float on tagged window
+MOD+SHIFT+f		 - toggle fullscreen on tagged window
+MOD+0			 - select all tabs
+MOD+SHIFT+0		 - tag all windows?
+MOD+Comma		 - focusmon -1
+MOD+Period		 - focusmon +1
+MOD+SHIFT+Comma  - tagmon -1
+MOD+SHIFT+Period - tagmon +1
+MOD+F5			 - reload xrdb
+MOD+(1-9)		 - select tab 1-9
+MOD+SHIFT+q		 - quit
