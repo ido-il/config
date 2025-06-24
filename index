@@ -2,8 +2,6 @@
 /etc/pacman.conf
 
 # shell
-/home/moose/.config/st
-!/home/moose/.config/st/st
 /home/moose/.zshrc
 /home/moose/.zprofile
 /home/moose/.tmux.conf
