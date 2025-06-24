@@ -19,4 +19,5 @@ super + b
   $BROWSER
 
 # volume control
-
+super + v + {j,k}
+  $SCRIPT_HOME/volume.sh {up,down} 43  # figure out wireplumber id detection. for now, 43

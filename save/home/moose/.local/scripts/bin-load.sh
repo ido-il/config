@@ -5,6 +5,7 @@ extend-lv.sh
 apparmor.sh
 qemu.sh
 screenshot.sh
+volume.sh
 "
 
 mkdir -p $HOME/.local/bin
