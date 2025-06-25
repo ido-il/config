@@ -1,7 +1,7 @@
 #!/bin/sh
 
 case $BLOCK_BUTTON in
-    1) pamixer -t ;;
+    1) notify-send "HEY" && pamixer -t ;;
     4) pamixer --increase 5 ;;
     5) pamixer --decrease 5 ;;
 esac

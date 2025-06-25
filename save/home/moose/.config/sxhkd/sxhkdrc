@@ -19,9 +19,5 @@ super + b
   $BROWSER
 
 # volume control
-# figure out wireplumber id detection. for now, 43
-{XF86AudioRaiseVolume,XF86AudioLowerVolume}
-  $SCRIPT_HOME/volume.sh {up,down} 43
-
-XF86AudioMute
-  $SCRIPT_HOME/volume.sh toggle 43
+super + {v,shift + v}
+  pamixer {--decrease,--increase} 5
