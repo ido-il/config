@@ -6,7 +6,6 @@ config = config
 config.load_autoconfig(False)
 
 # Theme & Appearance
-c.colors.webpage.darkmode.enabled = True
 c.colors.webpage.preferred_color_scheme = 'dark'
 c.qt.highdpi = True
 c.tabs.show = 'always'
