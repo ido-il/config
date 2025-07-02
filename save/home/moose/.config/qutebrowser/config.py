@@ -17,15 +17,13 @@ c.statusbar.show = 'in-mode'
 c.downloads.location.directory = '~/Downloads'
 
 # Privacy & Security
+c.content.headers.do_not_track = True
 c.content.headers.accept_language = "en-US,en;q=0.9"
 c.content.headers.user_agent = (
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
-    "AppleWebKit/537.36 (KHTML, like Gecko)"
-    "Chrome/137.0.0.0 Safari/537.36"
+    "Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko)"
+    "{upstream_browser_key}/{upstream_browser_version_short} Safari/{webkit_version}"
 )
 
-# do_not_track break youtube
-c.content.headers.do_not_track = True
 
 c.content.autoplay = False
 c.content.geolocation = False
