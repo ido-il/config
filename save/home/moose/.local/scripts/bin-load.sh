@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 SCRIPTS="
+calc.sh
 top-dirs.sh
 extend-lv.sh
 apparmor.sh
 qemu.sh
 screenshot.sh
-volume.sh
 "
 
 mkdir -p $HOME/.local/bin

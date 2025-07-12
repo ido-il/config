@@ -11,5 +11,6 @@ export TERM="st"
 export TERMINAL="st"
 
 export CARGO_HOME="$HOME/.local/cargo"
+export OLLAMA_ROCM_ENABLED=1
 
 [[ -z $TMUX ]] && startx

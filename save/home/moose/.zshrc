@@ -1,8 +1,9 @@
-
 alias nv="nvim"
+alias gc="git commit"
+alias ga="git add"
 alias gs="git status"
 
-source $CARGO_HOME/env
+[[ -d $CARGO_HOME ]] && source $CARGO_HOME/env
 
 # oh-my-zsh
 export ZSH="$HOME/.config/oh-my-zsh"
