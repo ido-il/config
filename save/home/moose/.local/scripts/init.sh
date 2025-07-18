@@ -6,4 +6,3 @@
 # daemon apps
 sxhkd &
 dunst &
-picom &
