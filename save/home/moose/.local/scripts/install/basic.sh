@@ -27,17 +27,17 @@ if [[ "$CONFIRM" != "y" ]]; then
     err "Aborting..."
 fi
 
-# Wiping disk
+# wiping disk
 wipefs --all --force "$DISK"
 sgdisk --zap-all "$DISK"
 
-# Create partitions
+# create partitions
 sudo sgdisk --new-gpt "$DISK"
 sgdisk -n 1:0:512M -t 1:ef00 -c 1:EFI "$DISK"
 sgdisk -n 2:0:0    -t 2:8300 -c 2:ROOT "$DISK"
 partprobe "$DISK"
 
-# Set base partition names
+# set base partition names
 EFI_PART=""
 ROOT_PART=""
 if [[ "$DISK" =~ nvme[0-9]+n[0-9]+$ ]] \
