@@ -21,6 +21,7 @@
 /home/moose/.config/qutebrowser
 !/home/moose/.config/qutebrowser/autoconfig.yml
 !/home/moose/.config/qutebrowser/bookmarks
+!/home/moose/.config/qutebrowser/quickmarks
 !/home/moose/.config/qutebrowser/qsettings
 
 # remove sensitive data
@@ -29,5 +30,6 @@
 # other
 /home/moose/.config/dunst
 /home/moose/.config/sxhkd
+/home/moose/.config/discord/settings.json
 /home/moose/.local/scripts
 /home/moose/.local/src
