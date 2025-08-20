@@ -24,7 +24,6 @@ c.content.headers.user_agent = (
     "{upstream_browser_key}/{upstream_browser_version_short} Safari/{webkit_version}"
 )
 
-
 c.content.autoplay = False
 c.content.geolocation = False
 c.content.desktop_capture = False
@@ -45,6 +44,8 @@ c.content.blocking.adblock.lists = [
 # Search engines
 c.url.searchengines = {
     "DEFAULT": "https://duckduckgo.com/?q={}",
+    "translate": "https://translate.google.com/?sl=auto&tl=en&text={}&op=translate",
+    "man": "https://man.archlinux.org/man/{}.en",
     "wiki": "https://en.wikipedia.org/wiki/{}",
     "dict": "https://www.dictionary.com/browse/{}",
     "jklm": "https://www.merriam-webster.com/wordfinder/classic/contains/all/-1/{}/1"  # noqa: E501
